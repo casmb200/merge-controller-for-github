@@ -1,0 +1,23 @@
+{
+  "name": "Github Merge Control",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Github Pull Requestのマージボタン活性制御を行います。",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/**",
+        "https://*/**"
+      ],
+      "js": [
+        "node_modules/jquery/dist/jquery.min.js",
+        "app/merge_control.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "options_page": "app/option.html"
+}

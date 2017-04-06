@@ -1,0 +1,17 @@
+{
+  "name": "github-merge-control",
+  "version": "1.0.0",
+  "description": "Github Pull Requestのマージボタン活性制御を行います。",
+  "author": {
+    "name": "Ryo Nakajima",
+    "email": "cas.mb200@gmail.com"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/casmb200/github-merge-control"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
