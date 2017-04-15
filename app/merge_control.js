@@ -13,7 +13,7 @@ $(function() {
 
       // target Pull Request URL
       if (location.href.search(items.github_url) != -1 && location.href.search(/\/pull\//) != -1) {
-        $('.btn-group-merge').ready(function() {
+        $('.btn-group-merge>.js-menu-target').ready(function() {
           if (is_target_request() && is_target_title()) {
             $('.btn-group-merge>.js-details-target').attr('disabled', 'disabled');
             $('.btn-group-merge>.js-details-target').html('Do not merge!');
