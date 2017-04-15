@@ -1,19 +1,12 @@
 $(function() {
 
-  var setting = {};
-  setting = {
-      url: 'https://github.com',
-      user: 'casmb200',
-      repository: 'github-merge-control',
-      branch: 'master'
-  };
+  chrome.storage.local.get(function(items) {
 
-  chrome.storage.local.get(setting, function(items) {
-
-    var TARGET_URL = items.url;
+    var BASE_URL = items.url;
     var TARGET_USER = items.user;
     var TARGET_REPOSITORY = items.repository;
     var TARGET_BRANCH = items.branch;
+    var TITLE_RULE = items.title_rule;
 
     merge_control();
     $(window).on('statechange', function(e, data) {
@@ -25,7 +18,7 @@ $(function() {
     function merge_control() {
 
       // target Pull Request URL
-      if (location.href.search(TARGET_URL) != -1 && location.href.search(/\/pull\//) != -1) {
+      if (location.href.search(BASE_URL) != -1 && location.href.search(/\/pull\//) != -1) {
         $('.btn-group-merge').ready(function() {
           if (is_target_request() && is_target_title()) {
             $('.btn-group-merge>.js-details-target').attr('disabled', 'disabled');

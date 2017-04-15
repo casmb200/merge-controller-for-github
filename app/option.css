@@ -1,0 +1,72 @@
+.clearfix:after { 
+  display: block;
+  clear: both;
+  height: 0px;
+  visibility: hidden;
+  content: ".";
+}
+
+body {
+  font-size: 14px;
+}
+.contents {
+  margin: 15px 0;
+  padding: 0;
+}
+.explanation {
+  width: 500px;
+  padding: 5px;
+  background: WhiteSmoke;
+  border-radius: 7px;
+}
+.explanation > p {
+  margin: 5px;
+}
+
+ul.input-group, ul.opt-head, ul.opt-body {
+  margin: 0;
+  padding: 5px;
+}
+ul.input-group > li, ul.opt-head > li, ul.opt-body > li {
+  list-style-type: none;
+  float: left;
+}
+
+ul.input-group > li.input-title {
+  font-weight: bold;
+  margin-right: 10px;
+}
+ul.input-group > li.input-title:after {
+  content: ":";
+}
+
+#f_github_url {
+  width: 300px;
+}
+
+ul.opt-head > li, ul.opt-body > li {
+  padding: 0 15px 0 0;
+}
+ul.opt-head > li {
+  font-weight: bold;
+}
+ul.opt-body > li > input[type="text"] {
+  text-align: left;
+  width: 100%;
+}
+ul.opt-head > li:nth-child(1), ul.opt-body > li:nth-child(1) {
+  width: 300px;
+}
+ul.opt-head > li:nth-child(2), ul.opt-body > li:nth-child(2) {
+  width: 100px;
+}
+ul.opt-head > li:nth-child(3), ul.opt-body > li:nth-child(3) {
+  width: 200px;
+}
+ul.opt-head > li:nth-child(4), ul.opt-body > li:nth-child(4) {
+  width: 100px;
+}
+
+#b_reset{
+  margin-left: 10px;
+}
