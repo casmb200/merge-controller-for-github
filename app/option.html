@@ -5,8 +5,32 @@
     <title>Option</title>
     <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./option.js"></script>
+    <link rel="stylesheet" href="./option.css">
   </head>
   <body>
-    <p>hoge</p>
+    <h1>Option</h1>
+    <div class="explanation">
+      <p>Explanation..</p>
+    </div>
+    <div class="contents">
+      <ul class="input-group clearfix">
+        <li class="input-title">Github URL</li>
+        <li><input type="text" id="f_github_url" name="f_github_url" value="" placeholder="ex) https://github.com"/></li>
+      </ul>
+      <ul class="opt-head clearfix">
+        <li>Rule</li>
+        <li>User</li>
+        <li>Repository</li>
+        <li>Branch</li>
+      </ul>
+      <ul class="opt-body clearfix">
+        <li><input type="text" id="f_title_rule" name="f_title_rule" value="" placeholder="ex) WIP|wip" /></li>
+        <li><input type="text" id="f_user" name="f_user" value="" placeholder="ex) github" /></li>
+        <li><input type="text" id="f_repository" name="f_repository" value="" placeholder="ex) repo" /></li>
+        <li><input type="text" id="f_branch" name="f_branch" value="" placeholder="ex) master" /></li>
+      </ul>
+    </div>
+    <button id="b_save" name="b_save">Save</button>
+    <button id="b_reset" name="b_reset">Reset setting</button>
   </body>
 </html>
