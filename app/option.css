@@ -55,15 +55,24 @@ ul.opt-body > li > input[type="text"] {
   width: 100%;
 }
 ul.opt-head > li:nth-child(1), ul.opt-body > li:nth-child(1) {
-  width: 300px;
+  width: 200px;
 }
 ul.opt-head > li:nth-child(2), ul.opt-body > li:nth-child(2) {
   width: 100px;
 }
 ul.opt-head > li:nth-child(3), ul.opt-body > li:nth-child(3) {
-  width: 200px;
+  width: 150px;
 }
 ul.opt-head > li:nth-child(4), ul.opt-body > li:nth-child(4) {
+  width: 100px;
+}
+ul.opt-head > li:nth-child(5), ul.opt-body > li:nth-child(5) {
+  width: 100px;
+}
+ul.opt-head > li:nth-child(6), ul.opt-body > li:nth-child(6) {
+  width: 150px;
+}
+ul.opt-head > li:nth-child(7), ul.opt-body > li:nth-child(7) {
   width: 100px;
 }
 
