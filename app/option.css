@@ -51,28 +51,46 @@ ul.opt-head > li {
   font-weight: bold;
 }
 ul.opt-body > li > input[type="text"] {
-  text-align: left;
   width: 100%;
 }
-ul.opt-head > li:nth-child(1), ul.opt-body > li:nth-child(1) {
-  width: 200px;
+ul.opt-body > li > label {
+  margin-right: 5px;
 }
+
+/* Title Rule */
+ul.opt-head > li:nth-child(1), ul.opt-body > li:nth-child(1) {
+  width: 180px;
+}
+/* Base User */
 ul.opt-head > li:nth-child(2), ul.opt-body > li:nth-child(2) {
   width: 100px;
 }
+/* Base Repository */
 ul.opt-head > li:nth-child(3), ul.opt-body > li:nth-child(3) {
-  width: 150px;
+  width: 120px;
 }
+/* Base Branch */
 ul.opt-head > li:nth-child(4), ul.opt-body > li:nth-child(4) {
   width: 100px;
 }
+/* Head User */
 ul.opt-head > li:nth-child(5), ul.opt-body > li:nth-child(5) {
   width: 100px;
 }
+/* Head Repository */
 ul.opt-head > li:nth-child(6), ul.opt-body > li:nth-child(6) {
-  width: 150px;
+  width: 120px;
 }
+/* Head Branch */
 ul.opt-head > li:nth-child(7), ul.opt-body > li:nth-child(7) {
+  width: 100px;
+}
+/* Merge */
+ul.opt-head > li:nth-child(8), ul.opt-body > li:nth-child(8) {
+  width: 130px;
+}
+/* Control */
+ul.opt-head > li:nth-child(9), ul.opt-body > li:nth-child(9) {
   width: 100px;
 }
 
