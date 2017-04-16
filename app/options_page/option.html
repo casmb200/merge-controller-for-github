@@ -2,15 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Option</title>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <title>Setting</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./option.js"></script>
     <link rel="stylesheet" href="./option.css">
   </head>
   <body>
-    <h1>Option</h1>
+    <h1>Setting</h1>
     <div class="explanation">
-      <p>Explanation..</p>
+      <ul>
+        <li>* = Match all</li>
+        <li>| = Separated values</li>
+        <li>The priority rule is from the top</li>
+      </ul>
     </div>
     <div class="contents">
       <ul class="input-group clearfix">
@@ -31,7 +35,7 @@
         </ul>
       </div>
     </div>
-    <button id="b_save" name="b_save">Save</button>
+    <button id="b_save" name="b_save">Save setting</button>
     <button id="b_reset" name="b_reset">Reset setting</button>
   </body>
 </html>
