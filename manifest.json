@@ -14,10 +14,10 @@
       ],
       "js": [
         "node_modules/jquery/dist/jquery.min.js",
-        "app/merge_control.js"
+        "app/content_scripts/merge_control.js"
       ],
       "run_at": "document_end"
     }
   ],
-  "options_page": "app/option.html"
+  "options_page": "app/options_page/option.html"
 }
