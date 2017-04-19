@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Setting</title>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./option.js"></script>
+    <link rel="stylesheet" href="./option.css">
+  </head>
+  <body>
+    <h1>Setting</h1>
+    <div class="explanation">
+      <ul>
+        <li>* = Match all</li>
+        <li>| = Separated values</li>
+        <li>The priority rule is from the top</li>
+      </ul>
+    </div>
+    <div class="contents">
+      <ul class="input-group clearfix">
+        <li class="input-title">Github URL</li>
+        <li><input type="text" id="f_github_url" name="f_github_url" value="" placeholder="ex) https://github.com"/></li>
+      </ul>
+      <div id="opt-table">
+        <ul class="opt-head clearfix">
+          <li>Title rule</li>
+          <li>Base user</li>
+          <li>Base repository</li>
+          <li>Base branch</li>
+          <li>Head user</li>
+          <li>Head repository</li>
+          <li>Head branch</li>
+          <li>Merge</li>
+          <li>Control</li>
+        </ul>
+      </div>
+    </div>
+    <button id="b_save" name="b_save">Save setting</button>
+    <button id="b_reset" name="b_reset">Reset setting</button>
+  </body>
+</html>
