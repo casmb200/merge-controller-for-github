@@ -9,18 +9,18 @@ $(function() {
        * Event trigger
        */
       // Page has Loaded
-      merge_control();
+      control_merge();
       // Tab has switched
       $(window).on('statechange', function(e, data) {
         if (history.state.url !== undefined) {
-          merge_control();
+          control_merge();
         }
       });
       // Timeline has Changed
       if ($('.js-discussion')) {
         new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
-            merge_control();
+            control_merge();
           });
         }).observe($('.js-discussion')[0], { childList: true });
       }
@@ -30,7 +30,7 @@ $(function() {
           mutations.forEach(function(mutation) {
             mutation.addedNodes.forEach(function(node) {
               if ($(node).html() && $(node).html().search('btn-primary') != -1 && $(node).html().search('js-details-target') != -1) {
-                merge_control();
+                control_merge();
               }
             });
           });
@@ -39,7 +39,7 @@ $(function() {
     }
 
     // Main Process
-    function merge_control() {
+    function control_merge() {
       // Wait until merge button is load
       $('.btn-group-merge>.js-menu-target').ready(function(e) {
         if ($('.btn-group-merge>.js-menu-target').hasClass('btn-primary')) {
