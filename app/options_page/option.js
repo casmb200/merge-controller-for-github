@@ -57,6 +57,12 @@ $(function(){
 
     // Save
     $('#b_save').on('click', function(e) {
+
+      if ($('#inputForm')[0].checkValidity() == false) {
+        $('#b_check').click();
+        return false;
+      }
+
       const max_number = $('#opt-table>ul').length - 1;
       let storage = {
         'github_url': $('#f_github_url').val(),
@@ -91,22 +97,22 @@ $(function(){
     function add_row(select_number) {
       const add_number = $('#opt-table>ul').length;
       const html = `<ul class="opt-body clearfix row_${add_number}">`
-                 +   `<li><input type="text" id="f_title_rule_${add_number}" name="f_title_rule_${add_number}" value="" placeholder="ex) WIP|wip" /></li>`
-                 +   `<li><input type="text" id="f_base_user_${add_number}" name="f_base_user_${add_number}" value="" placeholder="ex) github" /></li>`
-                 +   `<li><input type="text" id="f_base_repository_${add_number}" name="f_base_repository_${add_number}" value="" placeholder="ex) repo" /></li>`
-                 +   `<li><input type="text" id="f_base_branch_${add_number}" name="f_base_branch_${add_number}" value="" placeholder="ex) master" /></li>`
-                 +   `<li><input type="text" id="f_head_user_${add_number}" name="f_head_user_${add_number}" value="" placeholder="ex) hogehoge" /></li>`
-                 +   `<li><input type="text" id="f_head_repository_${add_number}" name="f_head_repository_${add_number}" value="" placeholder="ex) repo" /></li>`
-                 +   `<li><input type="text" id="f_head_branch_${add_number}" name="f_head_branch_${add_number}" value="" placeholder="ex) feature" /></li>`
+                 +   `<li><input type="text" id="f_title_rule_${add_number}" name="f_title_rule_${add_number}" value="" placeholder="ex) WIP|wip" required /></li>`
+                 +   `<li><input type="text" id="f_base_user_${add_number}" name="f_base_user_${add_number}" value="" placeholder="ex) github" required /></li>`
+                 +   `<li><input type="text" id="f_base_repository_${add_number}" name="f_base_repository_${add_number}" value="" placeholder="ex) repo" required /></li>`
+                 +   `<li><input type="text" id="f_base_branch_${add_number}" name="f_base_branch_${add_number}" value="" placeholder="ex) master" required /></li>`
+                 +   `<li><input type="text" id="f_head_user_${add_number}" name="f_head_user_${add_number}" value="" placeholder="ex) hogehoge" required /></li>`
+                 +   `<li><input type="text" id="f_head_repository_${add_number}" name="f_head_repository_${add_number}" value="" placeholder="ex) repo" required /></li>`
+                 +   `<li><input type="text" id="f_head_branch_${add_number}" name="f_head_branch_${add_number}" value="" placeholder="ex) feature" required /></li>`
                  +   `<li>`
                  +     `<label><input type="radio" id="f_merge_${add_number}_allow" name="f_merge_${add_number}" value="allow" checked />Allow</label>`
                  +     `<label><input type="radio" id="f_merge_${add_number}_disallow" name="f_merge_${add_number}" value="disallow" />Disallow</label>`
                  +   `</li>`
                  +   `<li>`
-                 +     `<button class="b_add char">+</button>`
-                 +     `<button class="b_remove char">-</button>`
-                 +     `<button class="b_up char">↑</button>`
-                 +     `<button class="b_down char">↓</button>`
+                 +     `<button type="button" class="b_add char">+</button>`
+                 +     `<button type="button" class="b_remove char">-</button>`
+                 +     `<button type="button" class="b_up char">↑</button>`
+                 +     `<button type="button" class="b_down char">↓</button>`
                  +   `</li>`
                  + `</ul>`;
       $('#opt-table').append(html);
