@@ -1,8 +1,9 @@
 {
-  "name": "Merge controller for GitHub",
+  "name": "__MSG_appName__",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "We control the merging of Github by title and branch.",
+  "description": "__MSG_description__",
+  "default_locale": "en",
   "permissions": [
     "storage"
   ],
