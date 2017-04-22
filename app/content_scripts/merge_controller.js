@@ -4,20 +4,33 @@ $(function() {
   chrome.storage.local.get(function(storage) {
 
     // Target URL only
-    if (is_match_url(storage.github_url, location.href) && location.href.search(/\/pull\//) != -1) {
+    if (is_match_url(storage.github_url, location.href)) {
       /*
        * Event trigger
        */
       // Page has Loaded
-      control_merge();
-      // Tab has switched
-      $(window).on('statechange', function(e, data) {
-        if (history.state.url !== undefined) {
+      $(window).on('load', function(e) {
+        if (location.href.search(/\/pull\//) != -1) {
           control_merge();
+          monitor_dom();
         }
       });
+      // Tab has switched
+      $(window).on('statechange', function(e) {
+        if (history.state.url !== undefined) {
+          $(document).ready(function(e) {
+            if (location.href.search(/\/pull\//) != -1) {
+              control_merge();
+              monitor_dom();
+            }
+          });
+        }
+      });
+    }
+
+    function monitor_dom() {
       // Timeline has Changed
-      if ($('.js-discussion')) {
+      if ($('.js-discussion')[0]) {
         new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
             control_merge();
@@ -25,7 +38,7 @@ $(function() {
         }).observe($('.js-discussion')[0], { childList: true });
       }
       // Button has appended
-      if ($('.discussion-timeline-actions')) {
+      if ($('.discussion-timeline-actions')[0]) {
         new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
             mutation.addedNodes.forEach(function(node) {
@@ -40,21 +53,18 @@ $(function() {
 
     // Main Process
     function control_merge() {
-      // Wait until merge button is load
-      $('.btn-group-merge>.js-menu-target').ready(function(e) {
-        if ($('.btn-group-merge>.js-menu-target').hasClass('btn-primary')) {
-          if (is_target_pull_request()) {
-            // Disable button
-            $('.btn-group-merge>.js-details-target').prop('disabled', true);
-            $('.btn-group-merge>.js-details-target').html('Merge disallowed!');
-            $('.btn-group-merge>.js-menu-target').prop('disabled', true);
-          } else {
-            $('.btn-group-merge>.js-details-target').prop('disabled', false);
-            $('.btn-group-merge>.js-details-target').html('Merge pull request');
-            $('.btn-group-merge>.js-menu-target').prop('disabled', false);
-          }
+      if ($('.btn-group-merge>.js-menu-target').hasClass('btn-primary')) {
+        if (is_target_pull_request()) {
+          // Disable button
+          $('.btn-group-merge>.js-details-target').prop('disabled', true);
+          $('.btn-group-merge>.js-details-target').html('Merge disallowed!');
+          $('.btn-group-merge>.js-menu-target').prop('disabled', true);
+        } else {
+          $('.btn-group-merge>.js-details-target').prop('disabled', false);
+          $('.btn-group-merge>.js-details-target').html('Merge pull request');
+          $('.btn-group-merge>.js-menu-target').prop('disabled', false);
         }
-      });
+      }
     }
 
     // It is judged whether it is pull request of target
