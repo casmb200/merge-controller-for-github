@@ -106,3 +106,6 @@ ul.opt-head > li:nth-child(9), ul.opt-body > li:nth-child(9) {
 #b_reset{
   margin-left: 10px;
 }
+#b_check{
+  display: none;
+}
