@@ -10,7 +10,7 @@ $(function() {
        */
       // Page has Loaded
       $(window).on('load', function(e) {
-        if (location.href.search(/\/pull\//) != -1) {
+        if (location.href.match(/\/pull\//)) {
           control_merge();
           monitor_dom();
         }
@@ -19,7 +19,7 @@ $(function() {
       $(window).on('statechange', function(e) {
         if (history.state.url !== undefined) {
           $(document).ready(function(e) {
-            if (location.href.search(/\/pull\//) != -1) {
+            if (location.href.match(/\/pull\//)) {
               control_merge();
               monitor_dom();
             }
@@ -42,7 +42,7 @@ $(function() {
         new MutationObserver(function(mutations) {
           mutations.forEach(function(mutation) {
             mutation.addedNodes.forEach(function(node) {
-              if ($(node).html() && $(node).html().search('btn-primary') != -1 && $(node).html().search('js-details-target') != -1) {
+              if ($(node).html() && $(node).html().match('btn-primary') && $(node).html().match('js-details-target')) {
                 control_merge();
               }
             });
@@ -98,7 +98,7 @@ $(function() {
 
     function is_match_url(setting, url) {
       for (let word of setting.split('|')) {
-        if (url.search(setting) != -1) {
+        if (url.match(regexp_escape(setting))) {
           return true;
         }
       }
@@ -125,11 +125,15 @@ $(function() {
       const title = $('span.js-issue-title').html() || '';
       for (let word of title_rule.split('|')) {
         // Found the word
-        if (title.search(word) != -1) {
+        if (title.match(regexp_escape(word))) {
           return true;
         }
       }
       return false;
+    }
+
+    function regexp_escape(str) {
+      return str.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
     }
   });
 });
