@@ -1,14 +1,14 @@
 {
-  "name": "github-merge-control",
+  "name": "merge-controller-for-github",
   "version": "1.0.0",
-  "description": "Github Pull Requestのマージボタン活性制御を行います。",
+  "description": "We control the merging of Github by title and branch.",
   "author": {
     "name": "Ryo Nakajima",
     "email": "cas.mb200@gmail.com"
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/casmb200/github-merge-control"
+    "url" : "https://github.com/casmb200/merge-controller-for-github"
   },
   "license": "MIT",
   "dependencies": {
