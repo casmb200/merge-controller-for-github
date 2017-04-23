@@ -14,3 +14,9 @@ If you add a "WIP" to the title, you can not merge it into the master branch
 ![Example 2](https://raw.githubusercontent.com/casmb200/images/master/example2.png "Example-2")
 
 If you do not add a "Release" to the title, you can not merge it into the master branch or staging branch
+
+### Example 3
+
+![Example 3](https://raw.githubusercontent.com/casmb200/images/master/example3.png "Example-3")
+
+You can merge it into the master branch only from release branch
