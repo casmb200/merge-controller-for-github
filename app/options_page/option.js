@@ -6,6 +6,11 @@ $(function(){
     $(this).html(chrome.i18n.getMessage(column));
   });
 
+  // Prohibit enter submit
+  $(document).on("keypress", "input:not(.allow_submit)", function(event) {
+    return event.which !== 13;
+  });
+
   // Get local storage
   chrome.storage.local.get(function(storage) {
 
