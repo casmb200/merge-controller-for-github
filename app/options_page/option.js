@@ -1,5 +1,11 @@
 $(function(){
 
+  // Set Message
+  $('.msg').each(function(e) {
+    let column = $(this).data('message');
+    $(this).html(chrome.i18n.getMessage(column));
+  });
+
   // Get local storage
   chrome.storage.local.get(function(storage) {
 
@@ -82,13 +88,13 @@ $(function(){
         storage.settings.push(setting);
       }
       chrome.storage.local.set(storage, function(e) {
-        alert('Storage has been completed');
+        alert(chrome.i18n.getMessage('saveCompleted'));
       });
     });
 
     // Reset
     $('#b_reset').on('click', function(e) {
-      if (window.confirm('Are you sure?')) {
+      if (window.confirm(chrome.i18n.getMessage('confirm'))) {
         chrome.storage.local.clear();
         location.reload();
       }
@@ -128,7 +134,7 @@ $(function(){
     function remove_row(select_number) {
       const max_number = $('#opt-table>ul').length - 1;
       if (max_number == 1) {
-        alert('You can not remove');
+        alert(chrome.i18n.getMessage('notDelete'));
         return;
       }
       // Shift

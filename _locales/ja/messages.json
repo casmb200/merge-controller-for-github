@@ -1,0 +1,35 @@
+{
+  "appName": {
+    "message": "Merge controller for GitHub"
+  },
+  "description": {
+    "message": "Pull Requestのタイトル及びブランチによるマージの可否を制御します。"
+  },
+  "title": {
+    "message": "設定"
+  },
+  "explanation1": {
+    "message": "全てを対象とするには * を設定して下さい"
+  },
+  "explanation2": {
+    "message": "| 区切りで複数区切りで設定が行えます"
+  },
+  "explanation3": {
+    "message": "上から優先にルールが適用されます"
+  },
+  "saveButton": {
+    "message": "保存"
+  },
+  "resetButton": {
+    "message": "初期設定に戻す"
+  },
+  "saveCompleted": {
+    "message": "設定が保存されました。"
+  },
+  "confirm": {
+    "message": "設定が全て削除されますが、よろしいですか？"
+  },
+  "notDelete": {
+    "message": "削除できません。"
+  }
+}

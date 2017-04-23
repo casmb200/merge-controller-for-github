@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./option.css">
   </head>
   <body>
-    <h1>Setting</h1>
+    <h1 class="msg" data-message="title">Setting</h1>
     <div class="explanation">
       <ul>
-        <li>* = Match all</li>
-        <li>| = Separated values</li>
-        <li>The priority rule is from the top</li>
+        <li class="msg" data-message="explanation1">* = Match all</li>
+        <li class="msg" data-message="explanation2">| = Separated values</li>
+        <li class="msg" data-message="explanation3">The priority rule is from the top</li>
       </ul>
     </div>
     <form id="inputForm">
@@ -36,8 +36,8 @@
           </ul>
         </div>
       </div>
-      <button type="button" id="b_save" name="b_save">Save setting</button>
-      <button type="button" id="b_reset" name="b_reset">Reset setting</button>
+      <button type="button" id="b_save" name="b_save" class="msg" data-message="saveButton">Save setting</button>
+      <button type="button" id="b_reset" name="b_reset" class="msg" data-message="resetButton">Reset setting</button>
       <button type="submit" id="b_check" name="b_check">Check</button>
     </form>
   </body>

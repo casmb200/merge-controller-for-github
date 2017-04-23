@@ -1,0 +1,35 @@
+{
+  "appName": {
+    "message": "Merge controller for GitHub"
+  },
+  "description": {
+    "message": "We control the merging of Github by title and branch."
+  },
+  "title": {
+    "message": "Setting"
+  },
+  "explanation1": {
+    "message": "* = Match all"
+  },
+  "explanation2": {
+    "message": "| = Separated values"
+  },
+  "explanation3": {
+    "message": "The priority rule is from the top"
+  },
+  "saveButton": {
+    "message": "Save setting"
+  },
+  "resetButton": {
+    "message": "Reset setting"
+  },
+  "saveCompleted": {
+    "message": "Storage has been completed"
+  },
+  "confirm": {
+    "message": "Are you sure?"
+  },
+  "notDelete": {
+    "message": "You can not remove"
+  }
+}
