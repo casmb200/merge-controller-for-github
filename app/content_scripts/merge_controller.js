@@ -9,12 +9,10 @@ $(function() {
        * Event trigger
        */
       // Page has Loaded
-      $(window).on('load', function(e) {
-        if (location.href.match(/\/pull\//)) {
-          control_merge();
-          monitor_dom();
-        }
-      });
+      if (location.href.match(/\/pull\//)) {
+        control_merge();
+        monitor_dom();
+      }
       // Tab has switched
       $(window).on('statechange', function(e) {
         if (history.state.url !== undefined) {
