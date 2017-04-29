@@ -11,6 +11,12 @@ $(function(){
     return event.which !== 13;
   });
 
+  // Toggle example
+  $('#example-data').hide();
+  $('#example-title').on('click', function(e) {
+    $('#example-data').toggle();
+  });
+
   // Get local storage
   chrome.storage.local.get(function(storage) {
 
