@@ -31,5 +31,20 @@
   },
   "notDelete": {
     "message": "削除できません。"
+  },
+  "exampleOfSetting": {
+    "message": "設定例"
+  },
+  "example": {
+    "message": "例"
+  },
+  "exampleContents1": {
+    "message": "タイトルに\"[WIP]\" または \"[wip]\"がついている場合は、masterブランチへマージ禁止とする。"
+  },
+  "exampleContents2": {
+    "message": "タイトルに\"Release\"がついている場合のみ、master/stagingブランチへマージ可能とする。"
+  },
+  "exampleContents3": {
+    "message": "masterブランチへのマージはreleaseブランチからのみとする。"
   }
 }

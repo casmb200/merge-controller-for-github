@@ -3,13 +3,13 @@
 This is Chrome Extensions  
 We control the merging of Github by title and branch
 
-<img src="https://raw.githubusercontent.com/casmb200/images/master/mergeDisallowed.png" width="400px" alt="Merge disallowed" />
+<img src="https://raw.githubusercontent.com/casmb200/images/master/merge.png" width="400px" alt="Not allowed to merge" />
 
 ### Example 1
 
 <img src="https://raw.githubusercontent.com/casmb200/images/master/example1.png" alt="Example1" />
 
-If you add a "WIP" to the title, you can not merge it into the master branch
+If you add "[WIP]" or "[wip]" to the title, you can not merge it into the master branch
 
 ### Example 2
 

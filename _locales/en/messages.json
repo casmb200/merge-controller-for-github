@@ -29,7 +29,19 @@
   "confirm": {
     "message": "Are you sure?"
   },
-  "notDelete": {
-    "message": "You can not remove"
+  "exampleOfSetting": {
+    "message": "Example of setting"
+  },
+  "example": {
+    "message": "Example"
+  },
+  "exampleContents1": {
+    "message": "If you add \"[WIP]\" or \"[wip]\" to the title, you can not merge it into the master branch"
+  },
+  "exampleContents2": {
+    "message": "If you do not add a \"Release\" to the title, you can not merge it into the master branch or staging branch"
+  },
+  "exampleContents3": {
+    "message": "You can merge it into the master branch only from release branch"
   }
 }
