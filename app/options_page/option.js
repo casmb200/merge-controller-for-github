@@ -19,6 +19,7 @@ $(function(){
       // Set Default
       storage = {
         'github_url': 'https://github.com',
+        'message': 'Not allowed to merge!',
         'settings': [{
           'merge': 'allow'
         }]
@@ -26,6 +27,7 @@ $(function(){
       chrome.storage.local.set(storage, function(e) {});
     }
     $('#f_github_url').val(storage.github_url);
+    $('#f_message').val(storage.message);
     for (let setting of storage.settings) {
       const add_number = add_row();
       // text
@@ -77,6 +79,7 @@ $(function(){
       const max_number = $('#opt-table>ul').length - 1;
       let storage = {
         'github_url': $('#f_github_url').val(),
+        'message': $('#f_message').val(),
         'settings': []
       };
       for (let i=1; i<=max_number; i++) {

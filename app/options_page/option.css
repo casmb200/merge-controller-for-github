@@ -65,6 +65,11 @@ ul.opt-body > li > label {
 /* Github URL */
 #f_github_url {
   width: 300px;
+  margin-right: 15px;
+}
+/* Message */
+#f_message {
+  width: 300px;
 }
 /* Title Rule */
 ul.opt-head > li:nth-child(1), ul.opt-body > li:nth-child(1) {

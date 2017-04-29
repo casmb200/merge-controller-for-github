@@ -55,7 +55,7 @@ $(function() {
         if (is_target_pull_request()) {
           // Disable button
           $('.btn-group-merge>.js-details-target').prop('disabled', true);
-          $('.btn-group-merge>.js-details-target').html('Merge disallowed!');
+          $('.btn-group-merge>.js-details-target').html(storage.message || 'Not allowed to merge!');
           $('.btn-group-merge>.js-menu-target').prop('disabled', true);
         } else {
           $('.btn-group-merge>.js-details-target').prop('disabled', false);
