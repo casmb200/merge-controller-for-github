@@ -117,13 +117,13 @@ $(function(){
     function add_row(select_number) {
       const add_number = $('#opt-table>ul').length;
       const html = `<ul class="opt-body clearfix row_${add_number}">`
-                 +   `<li><input type="text" id="f_title_rule_${add_number}" name="f_title_rule_${add_number}" value="" placeholder="ex) WIP|wip" required /></li>`
-                 +   `<li><input type="text" id="f_base_user_${add_number}" name="f_base_user_${add_number}" value="" placeholder="ex) github" required /></li>`
-                 +   `<li><input type="text" id="f_base_repository_${add_number}" name="f_base_repository_${add_number}" value="" placeholder="ex) repo" required /></li>`
-                 +   `<li><input type="text" id="f_base_branch_${add_number}" name="f_base_branch_${add_number}" value="" placeholder="ex) master" required /></li>`
-                 +   `<li><input type="text" id="f_head_user_${add_number}" name="f_head_user_${add_number}" value="" placeholder="ex) hogehoge" required /></li>`
-                 +   `<li><input type="text" id="f_head_repository_${add_number}" name="f_head_repository_${add_number}" value="" placeholder="ex) repo" required /></li>`
-                 +   `<li><input type="text" id="f_head_branch_${add_number}" name="f_head_branch_${add_number}" value="" placeholder="ex) feature" required /></li>`
+                 +   `<li><input type="text" id="f_title_rule_${add_number}" name="f_title_rule_${add_number}" value="" placeholder="e.g.) WIP|wip" required /></li>`
+                 +   `<li><input type="text" id="f_base_user_${add_number}" name="f_base_user_${add_number}" value="" placeholder="e.g.) github" required /></li>`
+                 +   `<li><input type="text" id="f_base_repository_${add_number}" name="f_base_repository_${add_number}" value="" placeholder="e.g.) repo" required /></li>`
+                 +   `<li><input type="text" id="f_base_branch_${add_number}" name="f_base_branch_${add_number}" value="" placeholder="e.g.) master" required /></li>`
+                 +   `<li><input type="text" id="f_head_user_${add_number}" name="f_head_user_${add_number}" value="" placeholder="e.g.) hogehoge" required /></li>`
+                 +   `<li><input type="text" id="f_head_repository_${add_number}" name="f_head_repository_${add_number}" value="" placeholder="e.g.) repo" required /></li>`
+                 +   `<li><input type="text" id="f_head_branch_${add_number}" name="f_head_branch_${add_number}" value="" placeholder="e.g.) feature" required /></li>`
                  +   `<li>`
                  +     `<label><input type="radio" id="f_merge_${add_number}_allow" name="f_merge_${add_number}" value="allow" checked />Allow</label>`
                  +     `<label><input type="radio" id="f_merge_${add_number}_disallow" name="f_merge_${add_number}" value="disallow" />Disallow</label>`
