@@ -110,7 +110,6 @@ $(function() {
       // if rule contains [*], try to first match.
       let idx = setting.indexOf('*');
       if (idx >= 1) {
-        idx = idx - 1;
         const forwardMatch = setting.substr(0,idx);
         if (forwardMatch.length > 0) {
           if (str.indexOf(forwardMatch) >= 0 ){
@@ -137,7 +136,6 @@ $(function() {
       // if rule contains [*], try to first match.
       let idx = title_rule.indexOf('*');
       if (idx >= 1) {
-        idx = idx - 1;
         const forwardMatch = title_rule.substr(0,idx);
         if (forwardMatch.length > 0) {
           if (title.indexOf(forwardMatch) >= 0 ){
