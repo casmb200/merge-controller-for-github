@@ -107,6 +107,17 @@ $(function() {
       // character [*] is allow
       if (setting == '*') { return true; }
 
+      // if rule contains [*], try to first match.
+      let idx = setting.indexOf('*');
+      if (idx >= 1) {
+        const forwardMatch = setting.substr(0,idx);
+        if (forwardMatch.length > 0) {
+          if (str.indexOf(forwardMatch) >= 0 ){
+            return true;
+          }
+        }
+      }
+
       for (let word of setting.split('|')) {
         // Found the word
         if (str == word) {
@@ -121,6 +132,17 @@ $(function() {
       if (title_rule == '*') { return true; }
 
       const title = $('span.js-issue-title').html() || '';
+     
+      // if rule contains [*], try to first match.
+      let idx = title_rule.indexOf('*');
+      if (idx >= 1) {
+        const forwardMatch = title_rule.substr(0,idx);
+        if (forwardMatch.length > 0) {
+          if (title.indexOf(forwardMatch) >= 0 ){
+            return true;
+          }
+        }
+      }
       for (let word of title_rule.split('|')) {
         // Found the word
         if (title.match(regexp_escape(word))) {
